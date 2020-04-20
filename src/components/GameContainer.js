@@ -9,12 +9,12 @@ const GameContainer = () => {
   const [numSquares, setNumSquares] = useState(BOARD_OPTIONS[0]);
   const [numPlayers, setNumPlayers] = useState(1);
   const [highScore, setHighScore] = useState(
-    localStorage.getItem("tictac_high_score") || 0
+    Number(localStorage.getItem("tictac_high_score")) || 0
   );
 
   useEffect(() => {
     if (highScore > 0) {
-      localStorage.setItem("tictac_high_score", highScore);
+      localStorage.setItem("tictac_high_score", Number(highScore));
     }
   }, [highScore]);
 
@@ -28,7 +28,7 @@ const GameContainer = () => {
 
   const handleGameWinner = (winner) => {
     if (winner === "X") {
-      setHighScore((score) => score + 1);
+      setHighScore((score) => Number(score) + 1);
     }
   };
 
