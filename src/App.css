@@ -1,0 +1,63 @@
+.App {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 0;
+  min-height: 100vh;
+}
+
+.BoardWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.Board {
+  display: grid;
+}
+
+.X {
+  color: var(--red);
+}
+
+.O {
+  color: var(--blue);
+}
+
+.Square {
+  cursor: pointer;
+  border: 2px solid black;
+  /* max-height: minmax(13vw);
+  max-width: minmax(13vw); */
+  height: 13vw;
+  width: 13vw;
+  text-align: center;
+  line-height: 13vw;
+  font-size: 10vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+h2.turn-display {
+  font-family: inherit;
+}
+
+@media screen and (min-width: 750px) {
+  .Square {
+    height: 10vw;
+    width: 10vw;
+    line-height: 10vw;
+    font-size: 7vw;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .Square {
+    height: 8vw;
+    width: 8vw;
+    line-height: 8vw;
+    font-size: 5vw;
+  }
+}
